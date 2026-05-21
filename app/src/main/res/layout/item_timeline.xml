@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Title + Icons -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:text="Wedding Schedule"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#6D4C41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- Edit -->
+            <ImageView
+                android:id="@+id/editBtn"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Edit item"/>
+
+            <!-- Delete -->
+            <ImageView
+                android:id="@+id/deleteBtn"
+                android:src="@android:drawable/ic_menu_delete"
+                android:layout_alignParentEnd="true"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="Delete item"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dateText"
+            android:text="Date: 21/05/2026"
+            android:layout_marginTop="8dp"
+            android:textColor="#555"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/detailsText"
+            android:text="Details: Nikkah Ceremony"
+            android:textColor="#555"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vowera_main_bg">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_media_previous"
+            android:contentDescription="Back"
+            android:padding="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="serif"
+            android:text="Guest List"
+            android:textColor="@color/rose_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- Summary cards -->
+    <LinearLayout
+        android:id="@+id/summaryBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:background="@drawable/input_bg" android:gravity="center" android:orientation="vertical" android:layout_marginEnd="4dp">
+            <TextView android:id="@+id/totalGuestCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/rose_dark" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total" android:textColor="@color/rose_text" android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:background="@drawable/input_bg" android:gravity="center" android:orientation="vertical" android:layout_marginStart="4dp" android:layout_marginEnd="4dp">
+            <TextView android:id="@+id/confirmedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#4CAF50" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirmed" android:textColor="@color/rose_text" android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:background="@drawable/input_bg" android:gravity="center" android:orientation="vertical" android:layout_marginStart="4dp" android:layout_marginEnd="4dp">
+            <TextView android:id="@+id/pendingCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FF9800" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" android:textColor="@color/rose_text" android:textSize="11sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="70dp" android:layout_weight="1" android:background="@drawable/input_bg" android:gravity="center" android:orientation="vertical" android:layout_marginStart="4dp">
+            <TextView android:id="@+id/declinedCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#F44336" android:textSize="20sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Declined" android:textColor="@color/rose_text" android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Filter pills -->
+    <LinearLayout
+        android:id="@+id/filterBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summaryBar"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp">
+
+        <TextView android:id="@+id/filterAll"   android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:background="@drawable/culture_card_selected" android:gravity="center" android:text="All"   android:textColor="@color/rose_title" android:textSize="12sp" android:textStyle="bold" android:layout_marginEnd="4dp" />
+        <TextView android:id="@+id/filterBride" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:background="@drawable/input_bg"              android:gravity="center" android:text="Bride" android:textColor="@color/rose_title" android:textSize="12sp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" />
+        <TextView android:id="@+id/filterGroom" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:background="@drawable/input_bg"              android:gravity="center" android:text="Groom" android:textColor="@color/rose_title" android:textSize="12sp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" />
+        <TextView android:id="@+id/filterOther" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:background="@drawable/input_bg"              android:gravity="center" android:text="Other" android:textColor="@color/rose_title" android:textSize="12sp" android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/emptyGuestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filterBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="No guests yet.&#10;Tap + to add your first guest."
+        android:textColor="@color/rose_light"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- Scrollable guest list -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterBar"
+        android:layout_above="@id/fabAddGuest"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:id="@+id/guestContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Add Guest FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddGuest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:backgroundTint="@color/rose_dark"
+        android:contentDescription="Add guest"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>

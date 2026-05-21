@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "572939243043",
+    "project_id": "vowera-ea77d",
+    "storage_bucket": "vowera-ea77d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572939243043:android:78d780702acc52c59eab96",
+        "android_client_info": {
+          "package_name": "com.example.vowera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572939243043-087ve0okmr9u9ifvkdf8ea9hqgjh2lqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vowera",
+            "certificate_hash": "29320182e761f74305740406202ab0305a90abce"
+          }
+        },
+        {
+          "client_id": "572939243043-ib7bf8ngh7griedu8d6ke9fodme7ad96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3hgK_ylLZMam8lkOXDI6uuPS2TkznH8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572939243043-ib7bf8ngh7griedu8d6ke9fodme7ad96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

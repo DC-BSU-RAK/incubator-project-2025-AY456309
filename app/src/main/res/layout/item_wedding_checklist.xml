@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/input_bg"
+    android:layout_margin="6dp"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <CheckBox
+        android:id="@+id/cbChecklistItem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp" />
+
+    <TextView
+        android:id="@+id/tvChecklistItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Checklist Item"
+        android:textColor="@color/rose_text"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/btnDeleteChecklistItem"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/rose_dark"
+        android:contentDescription="Delete Item"
+        android:layout_marginStart="12dp" />
+
+</LinearLayout>
+

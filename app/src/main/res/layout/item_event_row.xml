@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="@drawable/input_bg"
+    android:layout_marginBottom="10dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="12dp">
+
+    <TextView
+        android:id="@+id/eventRowName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/btnRenameEvent"
+        android:textColor="#5F5050"
+        android:textSize="14sp" />
+
+    <!-- Remove button (✕) -->
+    <ImageView
+        android:id="@+id/btnRemoveEvent"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="Remove event"
+        android:padding="4dp" />
+
+    <!-- Rename button (✏) — just to the left of remove -->
+    <ImageView
+        android:id="@+id/btnRenameEvent"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_toStartOf="@id/btnRemoveEvent"
+        android:layout_marginEnd="6dp"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_menu_edit"
+        android:contentDescription="Rename event"
+        android:padding="4dp" />
+
+</RelativeLayout>

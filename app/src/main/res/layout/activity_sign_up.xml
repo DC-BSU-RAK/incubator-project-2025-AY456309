@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vowera_main_bg"
+    android:paddingStart="28dp"
+    android:paddingEnd="28dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:id="@+id/signUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:fontFamily="serif"
+        android:text="Sign Up"
+        android:textColor="@color/rose_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/signUpTitle"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/input_bg"
+        android:hint="Full Name"
+        android:textColor="#5F5050"
+        android:textColorHint="#9B8585"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/nameInput"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:hint="Email"
+        android:textColor="#5F5050"
+        android:textColorHint="#9B8585"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/passwordContainer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/emailInput"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:paddingEnd="14dp">
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/passwordToggle"
+            android:background="@android:color/transparent"
+            android:hint="Password"
+            android:textColor="#5F5050"
+            android:textColorHint="#9B8585"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/passwordToggle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Show or hide password"
+            android:src="@drawable/ic_eye_closed" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/confirmPasswordContainer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/passwordContainer"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/input_bg"
+        android:paddingEnd="14dp">
+
+        <EditText
+            android:id="@+id/confirmPasswordInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/confirmPasswordToggle"
+            android:background="@android:color/transparent"
+            android:hint="Confirm Password"
+            android:textColor="#5F5050"
+            android:textColorHint="#9B8585"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/confirmPasswordToggle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Show or hide confirm password"
+            android:src="@drawable/ic_eye_closed" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/confirmPasswordContainer"
+        android:layout_marginTop="26dp"
+        android:backgroundTint="@color/rose_dark"
+        android:text="CREATE ACCOUNT"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/dividerRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignUp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#D8C4C4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="or sign up with"
+            android:textColor="#8F7A7A"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#D8C4C4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/socialRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dividerRow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/googleCard"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/social_icon_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:contentDescription="Google sign up"
+                android:scaleType="fitCenter"
+                android:src="@drawable/google_icon" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socialRow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Already have an account? Log In"
+        android:textColor="@color/rose_text"
+        android:textSize="14sp" />
+
+</RelativeLayout>
